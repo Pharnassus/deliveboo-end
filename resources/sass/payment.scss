@@ -1,0 +1,234 @@
+body {
+ /*  height: 100vh; */
+  header {
+    height: 100%;
+  }
+  .jumbotron {
+    height: 100%;
+    padding-top: 100px;
+  }
+  section {
+      margin: 20px;
+      padding: 40px;
+      box-shadow: 5px 6px 23px 3px rgb(0 0 0 / 75%);
+      background-color: white;
+      .separate-summary h2{
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: #F39200;
+        color: white;
+        text-transform: uppercase;
+        font-weight: 500;
+      }
+      .item_order {
+        display: flex;
+        // align-items: center;
+        padding-left: 10px;
+        font-size: 24px;
+        font-weight: 700;
+        border-left: 5px solid #F39200;
+        div {
+          width: 400px;
+        }
+      }
+      .tot_order {
+        span {
+          display: block;
+          margin-top: 10px;
+          padding: 5px 10px;
+          background-color: #F39200;
+          font-size: 28px;
+          font-weight: 500;
+          color: white;
+        }
+        h4 {
+          margin-top: 10px;
+          padding-left: 10px;
+          font-size: 32px;
+          border-left: 5px solid #F39200;
+        }
+      }
+      .price_resume {
+        width: 110px !important;
+        text-align: right;
+      }
+
+  }
+  .cont_form {
+    margin: 20px;
+    background-color: rgba(0,0,0,0);
+  }
+  .cont_pay_left, .cont_pay_right {   
+    padding: 40px !important;
+    width: 50%;
+    padding: 0 25px;
+    background-color: white;
+    box-shadow: 5px 6px 23px 3px rgb(0 0 0 / 75%);
+    margin-bottom: 50px;
+    h3 {
+      display: inline-block;
+      padding: 5px 10px;
+      font-size: 24px;
+      background-color: #F39200;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
+  .cont_pay_left {
+    margin-right: 20px;
+    label {
+      border-left: 5px solid #F39200;
+      padding-left: 10px;
+    }
+    input {
+      display: block;
+      width: 100%;
+      height: calc(1.5em + 0.75rem + 2px);
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
+      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    input:focus {
+      // box-shadow: lighten(#F39200, 40%) !important;
+      color: #495057;
+      background-color: #fff;
+      border-color: lighten(#F39200, 30%);
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem lighten(#F39200, 30%);
+    }
+    h3 {
+      margin-bottom: 40px;
+    }
+  }
+
+  .order-pay-container {
+    padding-top: 30px;
+    .btn {
+      background-color: #3BB54A !important;
+      color: white;
+      width: 100%;
+    }
+  }
+  
+  #app {
+    position: relative;
+    .separate-summary {
+      width: 100%;
+    }
+  }
+
+  .input_ms {
+    border: 0;
+    width: 250px;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  
+  #total {
+    width: 55px;
+  }
+
+  p {
+    display: inline-block
+  }
+
+  .logo_ms {
+    height: 150px;
+    position: absolute;
+    right: 20px;
+    top: 0px;
+    img {
+      height: 100%;
+    }
+  }
+
+  #pay-button {
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 5px;;
+    background-color: limegreen;
+
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section img {
+    display: none;
+  }
+  .item_order {
+    display: flex;
+    span:first-child {
+      display: inline-block;
+      width: 100px;
+    }
+    .price_resume {
+      display: flex;
+      text-align: left;
+      justify-content: flex-end;
+    }
+    
+  }
+}
+
+@media screen and (max-width: 768px) {  
+  header {
+    height: 100%;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  .item_order {
+    font-size: 16px !important;
+  }
+  .cont_form {
+    flex-direction: column;
+    .cont_pay_left, .cont_pay_right {
+      width: 100%;
+    }
+  }
+  .price_resume {
+    margin-left: 20px;
+  }
+  #jumbotron_res{
+    height: 100%;
+    background-position: right;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  section {
+    padding: 20px !important;
+    h2 {
+      font-size: 18px;
+    }
+    .item_order {
+      font-size: 14px !important;
+      div:first-child {
+        padding-right: 25px;
+        display: inline-block;
+      }
+      span:first-child {
+        margin: 0 5px !important;
+      }
+      .price_resume {
+        margin-left: 15px;
+      }
+    }
+
+    
+    #jumbotron_res{
+      height: 100%;
+      background-position: right;
+    }
+  }
+}

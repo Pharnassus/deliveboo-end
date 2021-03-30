@@ -1,0 +1,155 @@
+body {
+  overflow-x: hidden;
+}
+main {
+  padding-bottom: 100px;
+  min-height: 650px;
+  background-color: whitesmoke;
+  /* background: url('https://static.vecteezy.com/system/resources/previews/001/218/625/original/gray-and-white-gradient-abstract-vector.jpg');
+  background-size: cover; */
+  .container_main {
+    .row_categories {
+      display: flex;
+      margin-bottom: 50px;
+      box-shadow: #bfbfbf 0px 13px 17px -3px;
+      position: sticky;
+      top: 90px;
+      z-index: 5;
+      width: 100%;
+      ul{
+        margin: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        li {
+          text-align: center;
+          display: inline-block;
+          padding: 15px 10px;
+          width: calc(100% / 10);
+          background-color: white;
+          cursor: pointer;
+          transition: 0.5s;
+          &:hover {
+            background-color: $softOrange;
+          }
+          &:hover h5 {
+            color: white;
+          }
+          h5 {
+          margin: 0;
+          color: $softOrange;
+          text-transform: uppercase;
+          font-size: 16px;
+        }
+        }
+      }
+    }
+
+    
+  }
+
+  
+
+  //CARD RISTORANTI
+  .card {
+    margin: 30px;
+    width: calc(100% / 3 - 60px);
+    box-shadow: 5px 6px 23px 3px rgb(0 0 0 / 75%);
+    border-radius: 0;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
+    .card-img-top {
+      border-radius: 0;
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .btn_orange {
+      background-color: $softOrange;
+      font-weight: 700;
+      color: white;
+      border-radius: 0;
+    }
+  }
+  //FINE CARD RISTORANTI
+
+  .no_result {
+    padding: 100px 50px;
+    background-color: $softOrange;
+    border-radius: 0;
+    box-shadow: 5px 6px 23px 3px rgb(0 0 0 / 75%);
+    h1, h2 {
+      color: white;
+    }
+    h3 {
+      color: white;
+    }
+  }
+
+}
+
+
+// MEDIA QUERIES
+@media screen and (max-width: 1200px) {
+  
+  #icon_row {
+    width: calc(100% / 10);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    #categ_name {
+      padding: 10px 0;
+      font-size: 12px;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  
+  #categ_name {
+    font-size: 13px;
+  }
+   #icon_row {
+    width: calc(100% / 5);
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+}
+
+@media screen and (max-width: 768px) {
+ 
+  #row_categories_resp {
+    top: 70px;
+    #icon_row {
+      width: calc(100% / 5);
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  #row_categories_resp {
+    h5 {
+      padding: 10px 0;
+      font-size: 10px !important;
+    }
+  }
+
+}
+
+
+  

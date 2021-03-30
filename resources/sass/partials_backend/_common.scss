@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: $fontLato;
+}
+
+.flex_ms{
+    display: flex;
+    flex-direction: row;
+}
+
+.btn_login_ms{
+    color: #fff;
+    background-color: #A51B0B !important;
+    border-color: #C04F13 !important;
+    width: 150px;
+    border-radius: 8px !important;
+
+    &:hover{
+        background-color: #C04F13 !important;
+        border-color: #A51B0B !important;
+    }
+}
+.btn_register_ms{    
+    background-color: white !important;
+    border-color: gray !important;
+    width: 150px;
+    border-radius: 8px !important;
+
+    &:hover{
+        background-color: #C04F13 !important;
+        border-color: #A51B0B !important;
+        color: white;
+    }
+}
+
+
+
+

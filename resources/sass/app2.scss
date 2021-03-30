@@ -1,0 +1,13 @@
+//Frontend
+@import 'partials_frontend/_common';
+@import 'partials_frontend/_variables';
+@import 'partials_frontend/_header';
+@import 'partials_frontend/_main';
+@import 'partials_frontend/_footer';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+#blue-dropdown:active {
+  background-color: $darkRed;
+}

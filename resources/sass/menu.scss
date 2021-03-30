@@ -1,0 +1,393 @@
+@import 'partials_frontend/_common';
+@import 'partials_frontend/_variables';
+@import 'partials_frontend/_header';
+@import 'partials_frontend/_main';
+@import 'partials_frontend/_footer';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+//vue animation
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+//vue animation
+
+
+header {
+    border-bottom: 0.5px solid #F39200;
+    ul {
+        height: 50px;
+        li {
+            height: 100%;
+        }
+    }
+}
+
+header .chart {
+    border: 0.5px solid $softOrange;
+    // width: 150px;
+    background-color: $darkRed;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+    span {
+        font-size: 15px;
+        padding: 0 5px;
+    }
+    i, .pipe {
+        color: $softOrange;
+    }
+    i {
+      padding-right: 5px;
+    }
+}
+
+.jumbotron {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    h1 {
+        margin-top: 70px;
+        padding: 50px 10px 50px 150px;
+        font-size: 80px;
+        color: white;
+        border-bottom: 5px solid $softOrange;
+        font-family: 'Train One', cursive;
+        background-color: rgba(0,0,0,0.5);
+    }
+}
+
+main {
+    position: relative;
+    top: -400px;
+    left: 0;
+    background-color: transparent;
+    margin: 0;
+    margin-bottom: 50px;
+    padding: 0 70px;
+    display: flex;
+    flex-wrap: wrap;
+    img {
+        width: 100%;
+        height: 225px;
+        object-fit: cover;
+    }
+    #id_card {
+      margin: 20px;
+      width: calc(100% / 3 - 40px);
+    }
+    .chart {
+        transition: 0.5s;
+        font-size: 18px;
+        position: fixed;
+        top: 90px;
+        right: 0;
+        z-index: 9999;
+        height: calc(100vh - 90px);
+        width: 400px;
+        padding:50px 30px; 
+        color: white;
+        background-color: $darkRed;
+        border-top: 0.5px solid #F39200;
+        .listDishes {
+            overflow-y: auto;
+            height: 100%;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+        .chart_header {
+            width: 100%;
+            height: 50px;
+            img {
+                height: 50px;
+                width: auto;
+            }
+        }
+        .order {
+            padding-bottom: 10px;
+            border-bottom: 0.5px solid #F39200;
+            .shop_dish_name {
+              padding-left: 10px;
+              font-size: 22px;
+              font-weight: 500;
+              border-left: 5px solid #F39200;
+            }
+        }
+        .btn_confirm {
+            font-size: 24px;
+            font-weight: 700;
+            background-color: #F39200;
+            color: white;
+        }
+        .btn_plusmin {
+          font-size: 18px;
+          font-weight: 700;
+          background-color: #F39200;
+          color: white;
+        }
+        .btn_delete {
+          font-size: 24px;
+          border-color: #F39200;
+          color: #F39200;
+        }
+        .delete {
+            font-size: 18px;
+            color: #F39200;
+            transition: 0.3s;
+            cursor: pointer;
+            &:hover {
+                font-size: 20px;
+            }
+        }
+        .info > * {
+            width: calc(100% / 3);
+        }
+        
+        .total {
+            text-align: right;
+            padding: 10px;
+            font-size: 24px;
+        }
+    }
+    #not_cursor{
+      border-radius: 0;
+      &:hover {
+        cursor: no-drop;
+      }
+    }
+
+    #info_id {
+      h3 {
+        padding-left: 10px;
+        color: $darkRed;
+        border-left: 5px solid $softOrange;
+      }
+    }
+
+    #price_id {
+      span {
+        font-size: 24px;
+        padding-left: 10px;
+        border-left: 5px solid $softOrange;
+      }
+    }
+
+    .btn-danger {
+      background-color: $darkRed;
+      &:hover {
+        background-color: $darkRed;
+      }
+    }
+}
+
+footer {
+    margin-top: -400px;
+    .footer_right {
+      position: relative;
+      .go_up{
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        background-color: $darkRed;
+        a {
+          color: white;
+          &:hover {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+}
+
+.fas.fa-hamburger {
+    color: $softOrange;
+    font-size: 40px;
+    display: none;
+}
+
+.hiddenChart {
+    display: none;
+}
+
+.show {
+    opacity: 1;
+}
+
+
+@media screen and (max-width: 1400px) {
+  #id_card {
+    margin: 30px;
+    width: calc(100% / 2 - 60px) !important;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #id_card {
+    margin: 15px !important;
+    width: calc(100% / 2 - 30px) !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+    main{
+      padding: 0 50px;
+    }
+    .card {
+      width: calc((100% / 2) - 30px) !important;
+    }
+
+    .fas.fa-hamburger {
+        display: block;
+    }
+
+    header ul {
+        position: absolute;
+        border-bottom: 0.5px solid #F39200;
+        border-top: 0.5px solid #F39200;
+        top: 89px;
+        left: 0;
+        height: 40px;
+        width: 100%;
+        background-color: $darkRed;
+        font-size: 20px;
+        z-index: -1;
+        transition: all 0.5s;
+        li {
+            margin: 0 !important;
+            width: calc(100% / 2);
+            a {
+                width: 100%;
+                text-align: center;
+                font-size: 18px !important;
+            }
+            
+        }
+      
+    }
+    .hiddenList {
+        opacity: 0;
+    }
+    
+    .nav_bar > div {
+      width: calc(100% / 3);
+      text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 960px) {
+  #title_res{
+        margin-top: 50px;
+        padding: 30px 10px 30px 100px;
+        font-size: 50px;
+        color: white;
+    }
+    #id_card {
+      margin: 15px !important;
+      width: calc(100% / 1 - 30px) !important;
+    }
+}
+
+@media screen and (max-width: 780px) {
+
+  .jumbotron {   
+    height: 80vh;
+    h1 {
+        margin-top: 50px;
+        padding: 50px 10px 50px 150px;
+        font-size: 45px !important;
+      
+    }
+  }
+
+    main{
+      padding: 0 30px;
+    }
+    .chartCount {
+        opacity: 0;
+    }
+    .card {
+      width: calc(100% - 70px) !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .jumbotron {
+       
+        h1 {
+          margin-top: 80px !important;
+        }
+    }
+
+    .card {
+      width: calc(100% - 30px) !important;
+    }
+
+    main {       
+        padding: 0 20px;    
+        .chart {
+            width: 100% !important;
+        }
+    }
+
+    .chartCount {
+        display: none;
+    }
+
+    @keyframes fadeout {
+        0% {
+          top: 90px;
+          right: 0;
+        }
+    
+        100% {
+          top: 90px;
+          right: -100vw;
+        }
+    }
+
+    @keyframes out {
+        0% {
+          top: 0;
+          right: 0;
+        }
+    
+        100% {
+          top: 90px;
+          right: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+   .jumbotron {
+       
+        h1 {
+          font-size: 30px !important;
+          margin-top: 80px !important;
+        }
+    }
+  #price_id button{
+    font-size: 20px;
+    font-weight: 700;
+  }
+}

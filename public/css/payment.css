@@ -1,0 +1,221 @@
+body {
+  /*  height: 100vh; */
+}
+body header {
+  height: 100%;
+}
+body .jumbotron {
+  height: 100%;
+  padding-top: 100px;
+}
+body section {
+  margin: 20px;
+  padding: 40px;
+  box-shadow: 5px 6px 23px 3px rgba(0, 0, 0, 0.75);
+  background-color: white;
+}
+body section .separate-summary h2 {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #F39200;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+body section .item_order {
+  display: flex;
+  padding-left: 10px;
+  font-size: 24px;
+  font-weight: 700;
+  border-left: 5px solid #F39200;
+}
+body section .item_order div {
+  width: 400px;
+}
+body section .tot_order span {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #F39200;
+  font-size: 28px;
+  font-weight: 500;
+  color: white;
+}
+body section .tot_order h4 {
+  margin-top: 10px;
+  padding-left: 10px;
+  font-size: 32px;
+  border-left: 5px solid #F39200;
+}
+body section .price_resume {
+  width: 110px !important;
+  text-align: right;
+}
+body .cont_form {
+  margin: 20px;
+  background-color: rgba(0, 0, 0, 0);
+}
+body .cont_pay_left, body .cont_pay_right {
+  padding: 40px !important;
+  width: 50%;
+  padding: 0 25px;
+  background-color: white;
+  box-shadow: 5px 6px 23px 3px rgba(0, 0, 0, 0.75);
+  margin-bottom: 50px;
+}
+body .cont_pay_left h3, body .cont_pay_right h3 {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 24px;
+  background-color: #F39200;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+body .cont_pay_left {
+  margin-right: 20px;
+}
+body .cont_pay_left label {
+  border-left: 5px solid #F39200;
+  padding-left: 10px;
+}
+body .cont_pay_left input {
+  display: block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+body .cont_pay_left input:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #ffd18d;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem #ffd18d;
+}
+body .cont_pay_left h3 {
+  margin-bottom: 40px;
+}
+body .order-pay-container {
+  padding-top: 30px;
+}
+body .order-pay-container .btn {
+  background-color: #3BB54A !important;
+  color: white;
+  width: 100%;
+}
+body #app {
+  position: relative;
+}
+body #app .separate-summary {
+  width: 100%;
+}
+body .input_ms {
+  border: 0;
+  width: 250px;
+}
+body .input_ms:focus {
+  outline: none;
+}
+body #total {
+  width: 55px;
+}
+body p {
+  display: inline-block;
+}
+body .logo_ms {
+  height: 150px;
+  position: absolute;
+  right: 20px;
+  top: 0px;
+}
+body .logo_ms img {
+  height: 100%;
+}
+body #pay-button {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+  background-color: limegreen;
+}
+
+@media screen and (max-width: 1200px) {
+  section img {
+    display: none;
+  }
+
+  .item_order {
+    display: flex;
+  }
+  .item_order span:first-child {
+    display: inline-block;
+    width: 100px;
+  }
+  .item_order .price_resume {
+    display: flex;
+    text-align: left;
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    height: 100%;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .item_order {
+    font-size: 16px !important;
+  }
+
+  .cont_form {
+    flex-direction: column;
+  }
+  .cont_form .cont_pay_left, .cont_form .cont_pay_right {
+    width: 100%;
+  }
+
+  .price_resume {
+    margin-left: 20px;
+  }
+
+  #jumbotron_res {
+    height: 100%;
+    background-position: right;
+  }
+}
+@media screen and (max-width: 426px) {
+  section {
+    padding: 20px !important;
+  }
+  section h2 {
+    font-size: 18px;
+  }
+  section .item_order {
+    font-size: 14px !important;
+  }
+  section .item_order div:first-child {
+    padding-right: 25px;
+    display: inline-block;
+  }
+  section .item_order span:first-child {
+    margin: 0 5px !important;
+  }
+  section .item_order .price_resume {
+    margin-left: 15px;
+  }
+  section #jumbotron_res {
+    height: 100%;
+    background-position: right;
+  }
+}

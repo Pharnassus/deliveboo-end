@@ -1,0 +1,201 @@
+.body_login_ms{
+    height: 100vh;
+    background-image: radial-gradient(circle, #eda130, #e59228, #dd8221, #d5731c, #cc6417, #c15816, #b64b14, #aa3f13, #9a3412, #892810, #791e0e, #69130a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $fontColorLogin;
+    font-family: $font-family-sans-serif !important;
+    
+    nav{
+        display: none !important;
+    }
+    #app{
+        width: 70%;
+    }
+    
+
+    .card-header {
+        background-color: transparent;
+        border-bottom: none;
+        text-align: center;
+        font-size: 25px;
+        font-weight: 700;
+    }
+    .card{
+        background-color: rgba(0,0,0,0.1);
+        border: 2px solid $colorLogin;
+        border-radius: 10px;
+        position: relative;
+        i{
+            color: #A51B0B;
+            position: absolute;
+        }
+        .center_avatar_ms{
+            font-size: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -170px;
+            z-index: 2;
+            color: #83160A;
+        }
+        .left_avatar_ms{
+            font-size: 95px;
+            left: 38%;
+            transform: translateX(-50%);
+            top: -145px;
+            z-index: 1;
+        }
+        .right_avatar_ms{
+            font-size: 95px;
+            left: 62%;
+            transform: translateX(-50%);
+            top: -145px;
+            z-index: 1;
+        }
+
+        // modifica colori e dimensioni input
+        .input_style_ms{
+            color: $fontColorLogin;
+            font-size: 20px;
+
+            .form-control{
+                height: 50px;
+                border: 2px solid $colorLogin;
+
+                &:focus {
+                    color: black;
+                    background-color: white;
+                    border-color: none !important;
+                    outline: none !important;
+                    box-shadow: none !important;
+                }
+            }
+            .text-md-right {
+                line-height: 30px;
+
+                input:focus {
+                    outline: none !important;
+                }
+            }
+        }
+
+        .forgot_pwd_ms{
+            color: $fontColorLogin;
+        }
+
+    }
+
+    .register_link_ms{
+        // background-color: white;
+        text-align: right;
+        padding: 20px 0;
+
+        a, p{
+            display: inline-block;
+            margin-bottom: 0;
+            padding: 0;
+            vertical-align: baseline !important; 
+        }
+        p{
+            color: white;
+        }
+        a{
+            padding: 5px 10px;
+            margin-left: 20px;
+            color: #A51B0B;
+            
+            &:hover{
+                color: white;
+            }
+        }
+    }
+    
+}
+
+
+// QUERIES_____________________________________________________________________________________
+
+@media screen and (min-width: 1200px) and (max-width: 1450px) {
+    .body_login_ms .card .right_avatar_ms {
+        left: 64%;
+    }
+    .body_login_ms .card .left_avatar_ms {
+        left: 36%;
+    }
+}
+
+@media screen and (min-width: 981px) and (max-width: 1143px) {
+    .body_login_ms .card .right_avatar_ms {
+        left: 62% !important;
+    }
+    .body_login_ms .card .left_avatar_ms {
+        left: 38% !important;
+    }
+    .col-md-8 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 980px) {
+    .body_login_ms .card .right_avatar_ms {
+        left: 64% !important;
+    }
+    .body_login_ms .card .left_avatar_ms {
+        left: 36% !important;
+    }
+    .col-md-8 {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}
+
+@media screen and (min-width: 950px) and (max-width: 1199px) {
+    .body_login_ms .card .right_avatar_ms {
+        left: 68%;
+    }
+    .body_login_ms .card .left_avatar_ms {
+        left: 32%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 949px) {
+    .body_login_ms .card .right_avatar_ms {
+        left: 72%;
+    }
+    .body_login_ms .card .left_avatar_ms {
+        left: 28%;
+    }
+}
+
+@media screen and (min-width: 570px) and (max-width: 767px) {
+    .body_login_ms .card .right_avatar_ms {
+        left: 70%;
+    }
+    .body_login_ms .card .left_avatar_ms {
+        left: 30%;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 512px) {
+    .body_login_ms .card .center_avatar_ms {
+        font-size: 130px;
+        top: -150px;
+    }
+    .body_login_ms .card .right_avatar_ms, 
+    .body_login_ms .card .left_avatar_ms {
+        font-size: 85px;
+        top: -125px;
+    }
+
+}
+
+@media screen and (min-width: 370px) and (max-width: 569px) {
+    .body_login_ms .card .right_avatar_ms {
+        left: 74%;
+    }
+    .body_login_ms .card .left_avatar_ms {
+        left: 26%;
+    }
+}
